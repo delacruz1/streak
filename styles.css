@@ -1,0 +1,19 @@
+
+.container {
+    border: 5px solid red;
+    display: grid;
+    height: 60%;
+    width: 60%;
+
+}
+
+.container .gridRow {
+    border: 1px solid grey;
+    padding-bottom: 60%;
+    display: block;
+    overflow: auto;
+}
+
+.changeColor {
+    background-color: black;
+}
