@@ -16,7 +16,7 @@ h1 {
 }
 
 .wrapper {
-    display: flex;
+    display: flex; 
     justify-content: center;
 }
 
