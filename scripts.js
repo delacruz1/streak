@@ -5,24 +5,48 @@ function createSquareGrid(dimension) {
         let gridRow = document.createElement('div');
         gridRow.classList.add('gridRow');
         gridRow.addEventListener('mouseover', () => {
-            // console.log('hovered over');
             gridRow.style.backgroundColor = 'black';
         })
-        // gridRow.textContent = i+1;
         container.appendChild(gridRow);
-        //console.log("add grid #::: " + i);
     }
 
     const rows = document.querySelectorAll('gridRow');
     attachListeners(rows);
-    console.log("listeners attached");
-
 }
 
 function attachListeners(gridRows) {
     gridRows.forEach((row) => {
-        
     });
 }
 
-createSquareGrid(20);
+function setupGrid() {
+    createSquareGrid(50); 
+    let input = document.getElementById('size');
+
+    let timeout = null;
+
+    let output = document.getElementById('output')
+
+    input.addEventListener('input', function(e) {
+
+        output.textContent = input.value;
+        clearTimeout(timeout);
+
+        timeout = setTimeout(function () {
+            resetGrid(input.value);
+        }, 500);
+
+    });
+}
+
+function resetGrid(size) {
+    const container = document.querySelector('.container');
+    container.innerHTML = '';
+    let input = document.getElementById('size');
+    createSquareGrid(input.value); 
+}
+
+
+window.onload = () => {
+    setupGrid();
+}

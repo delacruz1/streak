@@ -1,15 +1,39 @@
+body {
+    background-color: beige;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 .container {
+    background-color: white;
     border: 5px solid red;
+    border-radius: 10px;
     display: grid;
-    height: 60%;
-    width: 60%;
-
+    width: 50%;
+    height: 50%;
+    position: absolute;
 }
 
 .container .gridRow {
-    border: 1px solid grey;
-    padding-bottom: 60%;
+    /* border: 1px solid grey; */
+    height: 100%;
+    width: 100%;
     display: block;
     overflow: auto;
 }
