@@ -4,8 +4,12 @@ function createSquareGrid(dimension) {
     for (i = 0; i < dimension**2; i++) {
         let gridRow = document.createElement('div');
         gridRow.classList.add('gridRow');
-        gridRow.addEventListener('mouseover', () => {
-            gridRow.style.backgroundColor = 'black';
+        gridRow.addEventListener('mousemove', () => {
+            let colorInput = document.querySelector('input[name="color"]:checked').value;
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            let color = (colorInput === 'black') ? "#000" : `#${randomColor}`;
+
+            gridRow.style.backgroundColor = color;
         })
         container.appendChild(gridRow);
     }
