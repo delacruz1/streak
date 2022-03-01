@@ -1,4 +1,4 @@
-#Streak
+# Streak
 
 An online Etch A Sketch. This is a project from The Odin Project's Foundations in Web Dev Course.
 
